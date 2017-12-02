@@ -1,3 +1,4 @@
+import { CategoryService } from './../pages/category/category.service';
 import { ScanQrPage } from '../pages/scan-qr/scan-qr';
 import { ThanksPage } from '../pages/thanks/thanks';
 import { ProductDetailPage } from '../pages/product-detail/product-detail';
@@ -13,6 +14,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { OrderDetailPage } from '../pages/order-detail/order-detail';
 import { GreetingPage } from '../pages/greeting/greeting';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { GreetingPage } from '../pages/greeting/greeting';
     ScanQrPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -45,6 +48,7 @@ import { GreetingPage } from '../pages/greeting/greeting';
   providers: [
     StatusBar,
     SplashScreen,
+    CategoryService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
