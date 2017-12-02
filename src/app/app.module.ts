@@ -16,7 +16,6 @@ import { OrderDetailPage } from '../pages/order-detail/order-detail';
 import { GreetingPage } from '../pages/greeting/greeting';
 import { HttpModule } from '@angular/http';
 
-import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
