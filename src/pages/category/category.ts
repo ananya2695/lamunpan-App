@@ -1,3 +1,4 @@
+import { CategoryService } from './category.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -15,11 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CategoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public categoryService :CategoryService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CategoryPage');
+    this.categoryService.getCatgory().then(data =>{
+      console.log(data);      
+    }).catch(err =>{
+      console.log(err);
+    });
   }
 
 }

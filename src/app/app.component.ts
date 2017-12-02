@@ -1,3 +1,4 @@
+import { CategoryPage } from './../pages/category/category';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -9,7 +10,11 @@ import { MenuPage } from '../pages/menu/menu';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage: any = MenuPage;
+=======
+  rootPage:any = CategoryPage;
+>>>>>>> 57ecd0981ac629c485ea575320daf18cc9ee1a64
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
