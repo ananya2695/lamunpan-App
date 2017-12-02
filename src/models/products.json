@@ -1,0 +1,27 @@
+[
+    {
+        "name": "americano",
+        "detail": "กาแฟอเมริกาโน่แท้",
+        "size": [
+            {
+                "size": "s",
+                "price": 20
+            }
+        ],
+        "type": [
+            {
+                "name": "hot",
+                "price": 10
+            },
+            {
+                "name": "cold",
+                "price": 20
+            },
+            {
+                "name": "frappe",
+                "price": 25
+            }
+        ],
+        "pic": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg"
+    }
+]
