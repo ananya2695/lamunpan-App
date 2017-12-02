@@ -1,0 +1,8 @@
+{
+  "name": "lamunpan-APP",
+  "app_id": "08b2a547",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
