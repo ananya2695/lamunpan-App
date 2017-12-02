@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Http, Response, Headers, } from '@angular/http';
+import 'rxjs/add/operator/map';
 /**
  * Generated class for the MenuPage page.
  *
@@ -14,9 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  public Product: any;
+  private apiUrl = 'http://'
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public http: Http) {
+    this.getdata();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  getdata() {
+    let promise = new Promise((resove, reject) => {
+      console.log('pass');
+      this.http.get('./pages/menu/menu.json', {}).map(res => res.json()).subscribe(res => {
+        resove(res);
+        console.log("DATA : " + res);
+      });
+    });
+
+    return promise;
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MenuPage');

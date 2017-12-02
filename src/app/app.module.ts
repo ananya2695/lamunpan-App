@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { OrderDetailPage } from '../pages/order-detail/order-detail';
 import { GreetingPage } from '../pages/greeting/greeting';
 
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -28,6 +29,7 @@ import { GreetingPage } from '../pages/greeting/greeting';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
