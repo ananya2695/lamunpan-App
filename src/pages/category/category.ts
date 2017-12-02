@@ -15,14 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'category.html',
 })
 export class CategoryPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,public categoryService :CategoryService) {
+  public category: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public categoryService: CategoryService) {
   }
 
   ionViewDidLoad() {
-    this.categoryService.getCatgory().then(data =>{
-      console.log(data);      
-    }).catch(err =>{
+    this.categoryService.getCatgory().then(data => {
+      this.category =data;
+      console.log(data[0].bestseller);
+    }).catch(err => {
       console.log(err);
     });
   }
