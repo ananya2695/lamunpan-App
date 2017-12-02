@@ -1,0 +1,48 @@
+[
+    {
+        "bestseller": [
+            {
+                "name": "americano",
+                "detail": "กาแฟอเมริกาโน่แท้",
+                "size": [
+                    {
+                        "size": "s",
+                        "price": 20
+                    }
+                ],
+                "type": [
+                    {
+                        "name": "hot",
+                        "price": 10
+                    },
+                    {
+                        "name": "cold",
+                        "price": 20
+                    },
+                    {
+                        "name": "frappe",
+                        "price": 25
+                    }
+                ],
+                "pic": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg"
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "pic": "https://www.facebook.com/photo.php?fbid=1958331227822795&set=ms.c.eJw9ysEJACAMA8CNxKRtmu6~%3BmIjg9zhMOQJkm~_yphQdwpielD7rDGx8aKCHyANGeDaE~-.bps.a.1958331157822802.1073741831.100009378112488&type=3&theater",
+                "name": "coffee"
+            },
+            {
+                "name": "milk & chocolate"
+            },
+            {
+                "name": "tea"
+            },
+            {
+                "name": "juice & smoothies"
+            }
+        ]
+    }
+]
