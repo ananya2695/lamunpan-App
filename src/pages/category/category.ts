@@ -1,6 +1,7 @@
 import { CategoryService } from './category.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { homeModel, categoryModel, bestsellerModel } from './category.model';
 
 /**
  * Generated class for the CategoryPage page.
@@ -15,14 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'category.html',
 })
 export class CategoryPage {
-  public category: any;
+  public homeModel: any = {};
+  //public bestseller: any;
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public categoryService: CategoryService) {
   }
 
   ionViewDidLoad() {
     this.categoryService.getCatgory().then(data => {
-      this.category =data;
-      console.log(data[0].bestseller);
+      this.homeModel = data;
+      
+      console.log(this.homeModel);
     }).catch(err => {
       console.log(err);
     });

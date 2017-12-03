@@ -32,7 +32,7 @@ export class ProductDetailPage {
 
   selectSize(si) {
     this.active[si] = "background-color: red;";
-this.size = si;
+    this.size = si;
   }
   selectType(ty) {
     this.activeTy[ty] = "background-color: red;";
@@ -46,9 +46,17 @@ this.size = si;
       this.num -= 1;
     }
   }
-  addToCart(prd){
-let Datacart = {
-  
-}
+  addToCart(prd) {
+    console.log(prd);
+    let Datacart = {
+      "_id": "1",
+      "name": "Americano",
+      "img": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg",
+      "size": "M",
+      "typeOfproduct": "hot",
+      "qty": 1,
+      "price": 50,
+      "table": 1,
+    }
   }
 }
