@@ -1,3 +1,18 @@
 page-order-detail {
-
+    .pr {
+        position: fixed;
+        bottom: 90px;
+        right: 10px;
+        font-size: 1.6em;
+    }
+    .pr-2 {
+        position: fixed;
+        bottom: 70px;
+        right: 10px;
+        font-size: 1.2em;
+    }
+    .item-md .item-button {
+        font-size: 2.0rem;
+        color: red;
+    }
 }

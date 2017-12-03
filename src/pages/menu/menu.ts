@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Response, Headers, } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { ProductDetailPage } from '../product-detail/product-detail';
+import { OrderDetailPage } from '../order-detail/order-detail';
 /**
  * Generated class for the MenuPage page.
  *
@@ -27,6 +28,12 @@ export class MenuPage {
   getdata() {
     let promise = new Promise((resove, reject) => {
       console.log('pass');
+      // this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
+      //   resove(res);
+      //   this.Product = res.products;
+      //   console.log("DATA : " + JSON.stringify(this.Product));
+      // });
+
       this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
         resove(res);
         this.Product = res.products;
@@ -44,5 +51,8 @@ export class MenuPage {
 
   gotoDetail(prd) {
     this.navCtrl.push(ProductDetailPage, prd);
+  }
+  gotobasket(){
+    this.navCtrl.push(OrderDetailPage);
   }
 }

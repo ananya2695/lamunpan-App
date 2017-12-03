@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "_id": "1",
+            "name": "Americano",
+            "pic": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg",
+            "size": "M",
+            "type": "hot",
+            "qty": 1,
+            "price": 50
+        },
+        {
+            "_id": "2",
+            "name": "Mocha",
+            "pic": "https://www.caffeineinformer.com/wp-content/caffeine/espresso.jpg",
+            "size": "S",
+            "type": "hot",
+            "qty": 1,
+            "price": 50
+        }
+    ],
+    "table": 1,
+    "totalQty": 2,
+    "totalPrice": 100
+}
