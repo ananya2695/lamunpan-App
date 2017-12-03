@@ -15,6 +15,7 @@ import { HomePage } from '../pages/home/home';
 import { OrderDetailPage } from '../pages/order-detail/order-detail';
 import { GreetingPage } from '../pages/greeting/greeting';
 import { HttpModule } from '@angular/http';
+import { OrderDetailService } from '../pages/order-detail/order-detail.service';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     CategoryService,
+    OrderDetailService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
