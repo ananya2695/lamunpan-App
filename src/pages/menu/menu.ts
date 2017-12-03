@@ -18,11 +18,14 @@ import { OrderDetailPage } from '../order-detail/order-detail';
 })
 export class MenuPage {
   public Product: any = {};
+  menu;
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: Http) {
     this.navParams.data;
+    this.menu = this.navParams.data.name;
     this.getdata().then((data) => {
       this.Product = data;
+      
       console.log("S : ", this.Product.items);
     });
     console.log("SS : ", this.navParams.data.product);
@@ -36,7 +39,7 @@ export class MenuPage {
       //   console.log("DATA : " + JSON.stringify(this.Product));
       // });
 
-      this.http.get('https://vit-c.herokuapp.com/api/productsbycate/' + this.navParams.data.product).map(res => res.json()).subscribe(res => {
+      this.http.get('https://vit-c.herokuapp.com/api/productsbycate/' + this.navParams.data.id).map(res => res.json()).subscribe(res => {
         resove(res);
       });
     });

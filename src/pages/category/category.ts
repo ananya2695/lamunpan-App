@@ -34,8 +34,8 @@ export class CategoryPage {
       console.log(err);
     });
   }
-  goToAllProducts(id){
-    this.navCtrl.push(MenuPage,{id});
+  goToAllProducts(id,name){
+    this.navCtrl.push(MenuPage,{id:id,name:name});
 
   }
   goToProductsDetail(product){

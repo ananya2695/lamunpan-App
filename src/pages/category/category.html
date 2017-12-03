@@ -26,7 +26,7 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-3 center *ngFor="let category of homeModel.category" (click)="goToAllProducts(category._id)">
+      <ion-col col-3 center *ngFor="let category of homeModel.category" (click)="goToAllProducts(category._id,category.name)">
         <img src="{{category.pic}}">
         <br> {{category.name}}
       </ion-col>
