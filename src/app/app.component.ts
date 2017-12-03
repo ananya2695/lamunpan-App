@@ -10,7 +10,8 @@ import { MenuPage } from '../pages/menu/menu';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = MenuPage;
+  rootPage:any = CategoryPage;
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
