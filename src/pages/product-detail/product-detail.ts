@@ -74,8 +74,11 @@ export class ProductDetailPage {
         "price": pricesum,
         "table": 1,
       }
+      window.localStorage.setItem("item", JSON.stringify(Datacart));
+      console.log("DATA CART : ",Datacart);
       this.navCtrl.pop();
-      console.log(Datacart);
+  
+      
     } else {
       alert("กรุณาเลือกจำนวนสินค้า")
     }
