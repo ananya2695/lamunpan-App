@@ -18,12 +18,11 @@ import { OrderDetailPage } from '../order-detail/order-detail';
 })
 export class MenuPage {
   public Product: any;
-  private apiUrl = 'http://'
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: Http) {
     this.navParams.data;
     this.getdata();
-      console.log(this.navParams.data);
+    console.log(this.navParams.data);
   }
   getdata() {
     let promise = new Promise((resove, reject) => {
@@ -34,7 +33,7 @@ export class MenuPage {
       //   console.log("DATA : " + JSON.stringify(this.Product));
       // });
 
-      this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
+      this.http.get('https://vit-c.herokuapp.com/api/productsbycate/' + this.navParams.data._id, {}).map(res => res.json()).subscribe(res => {
         resove(res);
         this.Product = res.products;
         console.log("DATA : " + JSON.stringify(this.Product));
@@ -52,7 +51,7 @@ export class MenuPage {
   gotoDetail(prd) {
     this.navCtrl.push(ProductDetailPage, prd);
   }
-  gotobasket(){
+  gotobasket() {
     this.navCtrl.push(OrderDetailPage);
   }
 }
