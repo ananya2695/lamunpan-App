@@ -11,7 +11,7 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-4 center *ngFor="let bestseller of homeModel.bestseller" (click)="goToProductsDetail(bestseller)">
+      <ion-col col-4 center *ngFor="let bestseller of homeModel.bestseller " (click)="goToProductsDetail(bestseller)">
        
           <img src="{{bestseller.pic}}">
           <br> {{bestseller.name}}

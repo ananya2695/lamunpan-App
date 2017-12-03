@@ -34,12 +34,12 @@ export class CategoryPage {
       console.log(err);
     });
   }
-  goToAllProducts(product){
-    this.navCtrl.push(MenuPage,{product:product});
+  goToAllProducts(id){
+    this.navCtrl.push(MenuPage,{id});
 
   }
-  goToProductsDetail(id){
-    this.navCtrl.push(ProductDetailPage,{id:id});
+  goToProductsDetail(product){
+    this.navCtrl.push(ProductDetailPage,product);
   }
 
 }
