@@ -1,3 +1,4 @@
+import { GreetingPage } from '../pages/greeting/greeting';
 import { CategoryPage } from './../pages/category/category';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -10,7 +11,7 @@ import { MenuPage } from '../pages/menu/menu';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CategoryPage;
+  rootPage:any = GreetingPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
