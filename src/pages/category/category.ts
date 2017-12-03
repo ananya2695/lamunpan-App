@@ -1,3 +1,5 @@
+import { ProductDetailPage } from './../product-detail/product-detail';
+import { MenuPage } from './../menu/menu';
 import { CategoryService } from './category.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -31,6 +33,13 @@ export class CategoryPage {
     }).catch(err => {
       console.log(err);
     });
+  }
+  goToAllProducts(id){
+    this.navCtrl.push(MenuPage,{id:id});
+
+  }
+  goToProductsDetail(id){
+    this.navCtrl.push(ProductDetailPage,{id:id});
   }
 
 }

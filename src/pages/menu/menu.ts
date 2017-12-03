@@ -19,8 +19,9 @@ export class MenuPage {
   private apiUrl = 'http://'
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: Http) {
+    this.navParams.data;
     this.getdata();
-
+      console.log(this.navParams.data);
   }
   getdata() {
     let promise = new Promise((resove, reject) => {
