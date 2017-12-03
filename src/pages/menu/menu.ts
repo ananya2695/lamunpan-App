@@ -17,26 +17,27 @@ import { OrderDetailPage } from '../order-detail/order-detail';
   templateUrl: 'menu.html',
 })
 export class MenuPage {
-  public Product: any;
+  public Product: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: Http) {
     this.navParams.data;
-    this.getdata();
-    console.log(this.navParams.data);
+    this.getdata().then((data) => {
+      this.Product = data;
+      console.log("S : ", this.Product.items);
+    });
+    console.log("SS : ", this.navParams.data.product);
   }
   getdata() {
     let promise = new Promise((resove, reject) => {
-      console.log('pass');
+
       // this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
       //   resove(res);
       //   this.Product = res.products;
       //   console.log("DATA : " + JSON.stringify(this.Product));
       // });
 
-      this.http.get('https://vit-c.herokuapp.com/api/productsbycate/' + this.navParams.data._id, {}).map(res => res.json()).subscribe(res => {
+      this.http.get('https://vit-c.herokuapp.com/api/productsbycate/' + this.navParams.data.product).map(res => res.json()).subscribe(res => {
         resove(res);
-        this.Product = res.products;
-        console.log("DATA : " + JSON.stringify(this.Product));
       });
     });
 
