@@ -29,13 +29,13 @@ export class CategoryPage {
     this.categoryService.getCatgory().then(data => {
       this.homeModel = data;
       console.log(this.homeModel);
-      
+
     }).catch(err => {
       console.log(err);
     });
   }
-  goToAllProducts(id){
-    this.navCtrl.push(MenuPage,{id:id});
+  goToAllProducts(product){
+    this.navCtrl.push(MenuPage,{product:product});
 
   }
   goToProductsDetail(id){
