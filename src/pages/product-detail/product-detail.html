@@ -7,12 +7,61 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>productDetail</ion-title>
+    <ion-title>{{prd.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+
+  <ion-row>
+    <ion-col text-center col-12>
+      <img [src]="prd.pic" img-size alt="">
+    </ion-col>
+  </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center col-12>
+        <h2>{{prd.name}}</h2>
+        <p>{{prd.detail}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center col-12>
+        <button ion-button icon-only (click)="add()">
+          <ion-icon name="md-add" sizebtn></ion-icon>
+        </button>
+        <span marginx>{{num}}</span>
+        <button ion-button icon-only (click)="remove()">
+          <ion-icon name="md-remove" sizebtn></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <h4>เลือกไซท์ที่ต้องการ</h4>
+    <ion-row>
+      <ion-col text-center col-12>
+        <button ion-button padding-right [style]="active['S']" (click)="selectSize('S')">S</button>
+        <button ion-button [style]="active['M']" (click)="selectSize('M')">M</button>
+        <button ion-button padding-left [style]="active['L']" (click)="selectSize('L')">L</button>
+      </ion-col>
+    </ion-row>
+    <h4>เลือกประเภทที่ต้องการ</h4>
+    <ion-row>
+      <ion-col text-center col-12>
+        <button ion-button padding-right [style]="activeTy['H']" (click)="selectType('H')">ร้อน</button>
+        <button ion-button [style]="activeTy['C']" (click)="selectType('C')">เย็น</button>
+        <button ion-button padding-left [style]="activeTy['F']" (click)="selectType('F')">ปั่น</button>
+      </ion-col>
+    </ion-row>
+   
+  </ion-grid>
 
 </ion-content>
+<ion-footer>
+    <ion-row>
+        <ion-col text-center col-12>
+          <button ion-button full (click)="addToCart(prd)">เพิ่มลงตระกร้า</button>
+        </ion-col>
+      </ion-row>
+</ion-footer>

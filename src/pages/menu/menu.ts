@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Response, Headers, } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { ProductDetailPage } from '../product-detail/product-detail';
 /**
  * Generated class for the MenuPage page.
  *
@@ -28,8 +29,8 @@ export class MenuPage {
       console.log('pass');
       this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
         resove(res);
-        this.Product = res.prproductso;
-        console.log("DATA : " + JSON.stringify(res));
+        this.Product = res.products;
+        console.log("DATA : " + JSON.stringify(this.Product));
       });
     });
 
@@ -41,4 +42,7 @@ export class MenuPage {
     console.log('ionViewDidLoad MenuPage');
   }
 
+  gotoDetail(prd) {
+    this.navCtrl.push(ProductDetailPage, prd);
+  }
 }
