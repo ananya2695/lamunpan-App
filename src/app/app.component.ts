@@ -11,12 +11,7 @@ import { OrderDetailPage } from '../pages/order-detail/order-detail';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  
-  rootPage: any = OrderDetailPage;
-=======
   rootPage:any = CategoryPage;
->>>>>>> ebb25f74f178e35b056d16134e56a39ccd91374c
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
