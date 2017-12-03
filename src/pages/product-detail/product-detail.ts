@@ -24,7 +24,7 @@ export class ProductDetailPage {
   num: number = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.prd = this.navParams.data;
-    console.log(this.prd);
+    console.log("PRD-Detail Page : " ,this.prd);
   }
 
   ionViewDidLoad() {
