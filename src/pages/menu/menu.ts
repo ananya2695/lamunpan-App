@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Response, Headers, } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { ProductDetailPage } from '../product-detail/product-detail';
+import { OrderDetailPage } from '../order-detail/order-detail';
 /**
  * Generated class for the MenuPage page.
  *
@@ -50,5 +51,8 @@ export class MenuPage {
 
   gotoDetail(prd) {
     this.navCtrl.push(ProductDetailPage, prd);
+  }
+  gotobasket(){
+    this.navCtrl.push(OrderDetailPage);
   }
 }

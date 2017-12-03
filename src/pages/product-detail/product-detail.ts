@@ -1,3 +1,4 @@
+import { OrderDetailPage } from '../order-detail/order-detail';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -68,16 +69,20 @@ export class ProductDetailPage {
         "name": prd.name,
         "pic": prd.pic,
         "size": this.size,
-        "typeOfproduct": this.type,
+        "type": this.type,
         "qty": this.num,
         "price": pricesum,
         "table": 1,
       }
+      this.navCtrl.pop();
       console.log(Datacart);
     } else {
-alert("กรุณาเลือกจำนวนสินค้า")
+      alert("กรุณาเลือกจำนวนสินค้า")
     }
 
 
+  }
+  gotobasket(){
+    this.navCtrl.push(OrderDetailPage);
   }
 }
