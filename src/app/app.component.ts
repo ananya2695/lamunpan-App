@@ -10,7 +10,11 @@ import { MenuPage } from '../pages/menu/menu';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = MenuPage;
+<<<<<<< HEAD
+  rootPage:any = CategoryPage;
+=======
+  rootPage: any = CategoryPage;
+>>>>>>> 8314db6ce5e18c4f835bb00a2f7390a210053f57
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

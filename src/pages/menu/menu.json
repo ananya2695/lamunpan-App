@@ -1,20 +1,14 @@
-{
-        "bestseller": [
+[
+    {
+        "products": [
             {
+                "category": "21211111122112212122",
                 "name": "americano",
                 "detail": "กาแฟอเมริกาโน่แท้",
                 "size": [
                     {
                         "size": "s",
                         "price": 20
-                    },
-                    {
-                        "size": "m",
-                        "price": 30
-                    },
-                    {
-                        "size": "l",
-                        "price": 40
                     }
                 ],
                 "type": [
@@ -34,6 +28,7 @@
                 "pic": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg"
             },
             {
+                "category": "21211111122112212122",
                 "name": "esspresso",
                 "detail": "เอสเปสโซ่อร่อยมาก",
                 "size": [
@@ -67,6 +62,7 @@
                 "pic": "https://www.caffeineinformer.com/wp-content/caffeine/espresso.jpg"
             },
             {
+                "category": "21211111122112212122",
                 "name": "latte",
                 "detail": "ลาเต้แสนอร่อย",
                 "size": [
@@ -98,25 +94,75 @@
                     }
                 ],
                 "pic": "http://caffeinekeyboard.com/wp-content/uploads/2017/06/%E0%B8%A5%E0%B8%B2%E0%B9%80%E0%B8%95%E0%B9%89.jpg"
-            }
-        ],
-    
-        "category": [
-            {
-                "pic": "https://www.facebook.com/photo.php?fbid=1958331227822795&set=ms.c.eJw9ysEJACAMA8CNxKRtmu6~%3BmIjg9zhMOQJkm~_yphQdwpielD7rDGx8aKCHyANGeDaE~-.bps.a.1958331157822802.1073741831.100009378112488&type=3&theater",
-                "name": "coffee"
             },
             {
-                "name": "milk & chocolate",
-                "pic":"https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/24131284_1958331184489466_4961961287562856521_n.jpg?oh=8292396d85abaa32535b7ab010856788&oe=5AD1CD41"
+                "category": "21211111122112212122",
+                "name": "cappucino",
+                "detail": "คาปูชิโน่ของแท้",
+                "size": [
+                    {
+                        "size": "s",
+                        "price": 20
+                    },
+                    {
+                        "size": "m",
+                        "price": 30
+                    },
+                    {
+                        "size": "l",
+                        "price": 40
+                    }
+                ],
+                "type": [
+                    {
+                        "name": "hot",
+                        "price": 10
+                    },
+                    {
+                        "name": "cold",
+                        "price": 20
+                    },
+                    {
+                        "name": "frappe",
+                        "price": 25
+                    }
+                ],
+                "pic": "https://www.facebook.com/photo.php?fbid=1958336984488886&set=a.1958336924488892.1073741832.100009378112488&type=3&theater"
             },
             {
-                "name": "tea",
-                "pic":"https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/24131554_1958331171156134_491590508884689240_n.jpg?oh=53463c12d5e8a2012728bc305ed9e305&oe=5AD033DD"
-            },
-            {
-                "name": "juice & smoothies",
-                "pic":"https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/24231875_1958331167822801_2679283994987165963_n.jpg?oh=3a9f359bb92059302048930a2915c465&oe=5A96A248"
+                "category": "21211111122112212122",
+                "name": "nocha",
+                "detail": "ม่อคค่าอร่อยที่สุดในโลก",
+                "size": [
+                    {
+                        "size": "s",
+                        "price": 20
+                    },
+                    {
+                        "size": "m",
+                        "price": 30
+                    },
+                    {
+                        "size": "l",
+                        "price": 40
+                    }
+                ],
+                "type": [
+                    {
+                        "name": "hot",
+                        "price": 10
+                    },
+                    {
+                        "name": "cold",
+                        "price": 20
+                    },
+                    {
+                        "name": "frappe",
+                        "price": 25
+                    }
+                ],
+                "pic": "https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/24296284_1958336931155558_3175586781423821564_n.jpg?oh=80cf8e994e710a0933827399bf68b1a9&oe=5AD64AAD"
             }
         ]
-}
+    }
+]
