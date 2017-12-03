@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Request } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { homeModel } from './category.model';
 
 @Injectable()
 export class CategoryService {
@@ -12,8 +13,9 @@ export class CategoryService {
 
         let promise = new Promise((resove, reject) => {
             console.log('pass');
-            this.http.get('./assets/JSON/category.json', {}).map(res => res.json()).subscribe(res => {
-                resove(res);
+           // this.http.get('./assets/JSON/category.json', {}).map(res => res.json()).subscribe(res => {
+            this.http.get('https://vit-c.herokuapp.com/api/productsbycategories', {}).map(res => res.json()).subscribe(res => {
+                resove(res as homeModel);
             });
         });
 

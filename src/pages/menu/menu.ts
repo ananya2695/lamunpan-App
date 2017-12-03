@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Response, Headers, } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { ProductDetailPage } from '../product-detail/product-detail';
 /**
  * Generated class for the MenuPage page.
  *
@@ -19,16 +20,23 @@ export class MenuPage {
   private apiUrl = 'http://'
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: Http) {
+    this.navParams.data;
     this.getdata();
-
+      console.log(this.navParams.data);
   }
   getdata() {
     let promise = new Promise((resove, reject) => {
       console.log('pass');
+      // this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
+      //   resove(res);
+      //   this.Product = res.products;
+      //   console.log("DATA : " + JSON.stringify(this.Product));
+      // });
+
       this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
         resove(res);
-        this.Product = res.prproductso;
-        console.log("DATA : " + JSON.stringify(res));
+        this.Product = res.products;
+        console.log("DATA : " + JSON.stringify(this.Product));
       });
     });
 
@@ -40,4 +48,7 @@ export class MenuPage {
     console.log('ionViewDidLoad MenuPage');
   }
 
+  gotoDetail(prd) {
+    this.navCtrl.push(ProductDetailPage, prd);
+  }
 }
