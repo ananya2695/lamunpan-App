@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
 
   <ion-row>
     <ion-col text-center col-12>
@@ -29,39 +29,37 @@
     </ion-row>
     <ion-row>
       <ion-col text-center col-12>
-        <button ion-button icon-only (click)="add()">
-          <ion-icon name="md-add" sizebtn></ion-icon>
-        </button>
-        <span marginx>{{num}}</span>
         <button ion-button icon-only (click)="remove()">
           <ion-icon name="md-remove" sizebtn></ion-icon>
         </button>
+        <span marginx>{{num}}</span>
+
+        <button ion-button icon-only (click)="add()">
+          <ion-icon name="md-add" sizebtn></ion-icon>
+        </button>
       </ion-col>
     </ion-row>
-    <h4>เลือกไซท์ที่ต้องการ</h4>
+    <h6>เลือกไซท์ที่ต้องการ</h6>
     <ion-row>
       <ion-col text-center col-12>
-        <button ion-button padding-right [style]="active['S']" (click)="selectSize('S')">S</button>
-        <button ion-button [style]="active['M']" (click)="selectSize('M')">M</button>
-        <button ion-button padding-left [style]="active['L']" (click)="selectSize('L')">L</button>
+        <button ion-button *ngFor="let si of prd.size" [style]="active[si.size]" (click)="selectSize(si.size)">{{si.size | uppercase}}</button>
       </ion-col>
     </ion-row>
-    <h4>เลือกประเภทที่ต้องการ</h4>
+    <h6>เลือกประเภทที่ต้องการ</h6>
     <ion-row>
       <ion-col text-center col-12>
-        <button ion-button padding-right [style]="activeTy['H']" (click)="selectType('H')">ร้อน</button>
-        <button ion-button [style]="activeTy['C']" (click)="selectType('C')">เย็น</button>
-        <button ion-button padding-left [style]="activeTy['F']" (click)="selectType('F')">ปั่น</button>
+        <button ion-button *ngFor="let ty of prd.type" [style]="activeTy[ty.name]" (click)="selectType(ty.name)">{{ty.name |uppercase}}</button>
+
       </ion-col>
     </ion-row>
-   
+
   </ion-grid>
 
 </ion-content>
 <ion-footer>
-    <ion-row>
-        <ion-col text-center col-12>
-          <button ion-button full (click)="addToCart(prd)">เพิ่มลงตระกร้า</button>
-        </ion-col>
-      </ion-row>
+  <ion-row>
+    <ion-col text-center col-12>
+      <button ion-button full (click)="addToCart(prd)">เพิ่มลงตระกร้า</button>
+    </ion-col>
+  </ion-row>
 </ion-footer>

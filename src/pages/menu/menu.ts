@@ -26,6 +26,12 @@ export class MenuPage {
   getdata() {
     let promise = new Promise((resove, reject) => {
       console.log('pass');
+      // this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
+      //   resove(res);
+      //   this.Product = res.products;
+      //   console.log("DATA : " + JSON.stringify(this.Product));
+      // });
+
       this.http.get('./assets/JSON/menu.json', {}).map(res => res.json()).subscribe(res => {
         resove(res);
         this.Product = res.products;

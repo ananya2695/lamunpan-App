@@ -20,7 +20,7 @@ export class ProductDetailPage {
   public size;
   public type;
   public prd;
-  num = 0;
+  num: number = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.prd = this.navParams.data;
     console.log(this.prd);
@@ -47,16 +47,37 @@ export class ProductDetailPage {
     }
   }
   addToCart(prd) {
-    console.log(prd);
-    let Datacart = {
-      "_id": "1",
-      "name": "Americano",
-      "img": "http://www.fusioncaffe.com/wp-content/uploads/2014/04/Caff%C3%A8-Americano.jpg",
-      "size": "M",
-      "typeOfproduct": "hot",
-      "qty": 1,
-      "price": 50,
-      "table": 1,
+    if (this.num !== 0) {
+      let typeselect;
+      let price1: number = 0;
+      let price2: number = 0;
+      for (let i = 0; i < prd.size.length; i++) {
+        if (this.size == prd.size[i].size) {
+          price1 = prd.size[i].price;
+        }
+      }
+      for (let i = 0; i < prd.type.length; i++) {
+        if (this.type == prd.type[i].name) {
+          price2 = prd.type[i].price;
+        }
+      }
+      let pricesum = price1 + price2 * this.num;
+      let Datacart = {
+
+        "_id": prd._id,
+        "name": prd.name,
+        "pic": prd.pic,
+        "size": this.size,
+        "typeOfproduct": this.type,
+        "qty": this.num,
+        "price": pricesum,
+        "table": 1,
+      }
+      console.log(Datacart);
+    } else {
+alert("กรุณาเลือกจำนวนสินค้า")
     }
+
+
   }
 }
