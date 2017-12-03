@@ -28,8 +28,8 @@ export class CategoryPage {
   ionViewDidLoad() {
     this.categoryService.getCatgory().then(data => {
       this.homeModel = data;
-      
       console.log(this.homeModel);
+      
     }).catch(err => {
       console.log(err);
     });
